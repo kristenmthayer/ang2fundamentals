@@ -8,5 +8,8 @@ import { MailService } from './mail.service';
 })
 export class AppComponent {
   title = `Let's get started!`;
+  onUpdate(id, text) {
+    this.mail.update(id, text);
+  }
   constructor(private mail: MailService) {}
 }
